@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %} Регистрация {% endblock %}
+
+{% block content %}
+    <form action="/registration" method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.login.label }}
+        {{ form.login }}
+        {{ form.password.label }}
+        {{ form.password }}
+        <input type="submit" value="Зарегистрировать"/>
+    </form>
+{% endblock %}

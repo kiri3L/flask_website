@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %} Авторизация {% endblock %}
+
+{% block content %}
+    <form action="/login" method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.login.label }}
+        {{ form.login }}
+        {{ form.password.label }}
+        {{ form.password }}
+        <input type="submit" value="Войти"/>
+    </form>
+{% endblock %}
